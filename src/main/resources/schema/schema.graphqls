@@ -1,0 +1,19 @@
+type Query {
+  top10(countryCode: String = ""): [Show]
+  watchAgain: [Show]
+  showsInCategory(category: Category!): [Show]
+}
+
+enum Category {
+  ACTION
+  DRAMA
+  DOCUMENTARY
+  HORROR
+  SPORT
+}
+
+type Show {
+  title: String
+  description: String
+  categories: [Category]
+}
